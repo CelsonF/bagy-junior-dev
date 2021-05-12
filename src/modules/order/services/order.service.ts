@@ -90,7 +90,7 @@ export class OrderService {
     const resultMessateUrl = await this.mailProvider.sendEmail(
       email,
       `Order approved ${order.id}`,
-      order.id,
+      `Order ${order.id}`,
     );
     return resultMessateUrl;
   }
@@ -104,6 +104,10 @@ export class OrderService {
     }
     const { qttStock: qttInStock } = product;
     const { qtt: qttToBuy } = prodInOrder;
-    return qttInStock;
+    if(qttToBuy > qttInStock)
+    {
+      return false
+    }
+    return true;
   }
 }
