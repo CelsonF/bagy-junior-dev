@@ -42,7 +42,7 @@ Agora é só acessar http://localhost:4000/graphql do seu navegador.
 
 `yarn` or `npm install`
 
-`yarn dev:server` or `npm dev:server`
+`yarn dev:server` or `npm run dev:server`
 
 Agora é só acessar http://localhost:8080/graphql do seu navegador.
 
