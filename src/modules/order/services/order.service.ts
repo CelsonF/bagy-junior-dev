@@ -104,10 +104,10 @@ export class OrderService {
     }
     const { qttStock: qttInStock } = product;
     const { qtt: qttToBuy } = prodInOrder;
-    if(qttToBuy > qttInStock)
+    if(qttToBuy <= qttInStock)
     {
-      return false
+      return true;
     }
-    return true;
+    return false;
   }
 }
