@@ -28,7 +28,7 @@ export default class EtherealMailProvider implements IMailProvider {
   ): Promise<string | boolean> {
     await this.createAccount();
     const message = await this.client.sendMail({
-      from: 'Bagy <bagy@bagy.com.br.com>',
+      from: 'Bagy <bagy@bagy.com.br>',
       to,
       subject,
       text: body,
